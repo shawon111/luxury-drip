@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 const HeaderDesktopMenu = () => {
     const menuItems = [
@@ -21,16 +22,16 @@ const HeaderDesktopMenu = () => {
                     <ul className="flex justify-center items-center space-x-8">
                         {menuItems.map((item, index) => (
                             <li key={index} className="relative group py-[8px]">
-                                <a href={item.link} className={`${item.link === "#" ? "text-[13px]" : "text-[15px]"} font-[600] text-[#cdcdcd] uppercase leading-[16.5px] tracking-[0.22px] hover:text-[#000000] p-[3px]`}>
+                                <Link href={item.link} className={`${item.link === "#" ? "text-[13px]" : "text-[15px]"} font-[500] text-[#cdcdcd] uppercase leading-[16.5px] tracking-[0.22px] hover:text-[#000000] p-[3px]`}>
                                     {item.name}
-                                </a>
+                                </Link>
                                 {item.submenu && (
                                     <ul className="absolute top-[16px] left-0 hidden group-hover:block bg-white shadow-lg mt-2 py-4">
                                         {item.submenu.map((subItem, subIndex) => (
                                             <li key={subIndex}>
-                                                <a href={subItem.link} className="block px-8 py-2 text-[15px] leading-[1.5] uppercase text-[#0b0b0b]">
+                                                <Link href={subItem.link} className="block px-8 py-2 text-[15px] leading-[1.5] uppercase text-[#0b0b0b]">
                                                     {subItem.name}
-                                                </a>
+                                                </Link>
                                             </li>
                                         ))}
                                     </ul>

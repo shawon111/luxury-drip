@@ -23,7 +23,7 @@ const ProductCard = () => {
 
       {/* Product Image */}
       <div className="relative z-0">
-        <Link href="products/234">
+        <Link href="/products/234">
           <Image
             src="/products/example-product-image.jpg"
             alt="Product Image"
@@ -39,13 +39,13 @@ const ProductCard = () => {
         <div className="flex items-center justify-between">
           <div className="flex flex-col gap-[5px]">
             {/* Title */}
-            <h3 className="text-[16px] font-[600] uppercase tracking-wide text-[#111111]">
-              <a href="#">T-SHIRT CRTZ</a>
+            <h3 className="text-[16px] font-[500] uppercase tracking-wide text-[#111111]">
+              <Link href="/products/234">T-SHIRT CRTZ</Link>
             </h3>
 
             {/* Subtitle */}
             <p className="text-[14px] uppercase text-[#767676] leading-[21px] mt-1">
-              <a href="#">Best Seller</a>
+              <Link href="/products/234">Best Seller</Link>
             </p>
           </div>
 
@@ -80,7 +80,8 @@ const ProductCard = () => {
         {/* Add to Cart Button & Eye Icon */}
         <div className="flex items-center justify-between mt-[20px]">
           <Button className="uppercase bg-transparent border-0 text-[#111111] shadow-none hover:bg-transparent hover:text-[#111111] hover:shadow-none hover:border-0 p-0 text-[16px] font-[500] leading-[1em]">
-            Add to Cart
+            
+            <Link href="/products/234">Add to Cart</Link>
           </Button>
           <Eye className="w-4 h-4" />
         </div>

@@ -6,7 +6,7 @@ import { useRef } from "react";
 
 const ProductCarousel = () => {
     const plugin = useRef(
-        Autoplay({ delay: 3000, stopOnInteraction: false })
+        Autoplay({ delay: 3000, stopOnInteraction: true })
     );
     return (
         <div>

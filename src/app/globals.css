@@ -118,10 +118,10 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground;
   }
 }
 
-body, h1, h2, h3, h4, h5, h6, p, a, span, li, button, input, textarea, select {
-  font-family: 'Jost', Arial, sans-serif;
+body, h1, h2, h3, h4, h5, h6, p, a, span, li, button, input, textarea, select, :placeholder-shown {
+  font-family: "Jost", sans-serif;
 }
