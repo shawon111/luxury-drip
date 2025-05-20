@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa6";
 
 const Footer = () => {
@@ -43,12 +44,12 @@ const Footer = () => {
                                 <div className="col-span-1">
                                     <h3 className="text-[13px] font-[500] text-[#fff] uppercase mb-[27px]">Shop</h3>
                                     <ul className="text-[13px] font-[400] text-[#fff]">
-                                        <li className="mb-[10px] text-base text-[#ffffffc9]"><a href="#">FAQ's</a></li>
-                                        <li className="mb-[10px] text-base text-[#ffffffc9]"><a href="#">Terms & Conditions</a></li>
-                                        <li className="mb-[10px] text-base text-[#ffffffc9]"><a href="#">Privacy Policy</a></li>
-                                        <li className="mb-[10px] text-base text-[#ffffffc9]"><a href="#">Shipping Policy</a></li>
-                                        <li className="mb-[10px] text-base text-[#ffffffc9]"><a href="#">Refund Policy</a></li>
-                                        <li className="mb-[10px] text-base text-[#ffffffc9]"><a href="#">Cash on Delivery Policy</a></li>
+                                        <li className="mb-[10px] text-base text-[#ffffffc9]"><Link href="/faqs">FAQ's</Link></li>
+                                        <li className="mb-[10px] text-base text-[#ffffffc9]"><Link href="#">Terms & Conditions</Link></li>
+                                        <li className="mb-[10px] text-base text-[#ffffffc9]"><Link href="#">Privacy Policy</Link></li>
+                                        <li className="mb-[10px] text-base text-[#ffffffc9]"><Link href="#">Shipping Policy</Link></li>
+                                        <li className="mb-[10px] text-base text-[#ffffffc9]"><Link href="#">Refund Policy</Link></li>
+                                        <li className="mb-[10px] text-base text-[#ffffffc9]"><Link href="#">Cash on Delivery Policy</Link></li>
                                     </ul>
                                 </div>
                                 <div className="col-span-1"></div>
