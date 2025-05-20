@@ -1,4 +1,11 @@
+import Bags from "@/components/home/Bags";
 import BestSellers from "@/components/home/BestSellers";
+import DenimTears from "@/components/home/DenimTears";
+import FeaturesBanner from "@/components/home/FeaturesBanner";
+import GuaranteeBanner from "@/components/home/GuaranteeBanner";
+import JeansDsq from "@/components/home/JeansDsq";
+import ShoesCategories from "@/components/home/ShoesCategories";
+import Tshirts from "@/components/home/Tshirts";
 import Image from "next/image";
 
 export default function Home() {
@@ -21,6 +28,13 @@ export default function Home() {
             />
           </a>
         </section>
+        <ShoesCategories />
+        <JeansDsq />
+        <DenimTears />
+        <GuaranteeBanner />
+        <Tshirts />
+        <Bags />
+        <FeaturesBanner />
       </main>
     </div>
   );

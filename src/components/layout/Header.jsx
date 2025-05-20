@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const Header = () => {
     return (
-        <div>
+        <header>
             <HeaderTopBar />
             <div className='bg-white py-[14px]'>
                 <div className="container flex justify-between items-center mx-auto">
@@ -29,7 +29,7 @@ const Header = () => {
                 </div>
             </div>
             <HeaderDesktopMenu />
-        </div>
+        </header>
     );
 };
 

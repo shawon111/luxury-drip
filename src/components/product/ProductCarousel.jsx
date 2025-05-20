@@ -12,19 +12,19 @@ const ProductCarousel = () => {
         <div>
             <Carousel plugins={[plugin.current]}>
                 <CarouselContent className="-ml-3">
-                    <CarouselItem className="basis-1/4 pl-3">
+                    <CarouselItem className="basis-full md:basis-1/2 lg:basis-1/4 pl-3">
                         <ProductCard />
                     </CarouselItem>
-                    <CarouselItem className="basis-1/4 pl-3">
+                    <CarouselItem className="basis-full md:basis-1/2 lg:basis-1/4 pl-3">
                         <ProductCard />
                     </CarouselItem>
-                    <CarouselItem className="basis-1/4 pl-3">
+                    <CarouselItem className="basis-full md:basis-1/2 lg:basis-1/4 pl-3">
                         <ProductCard />
                     </CarouselItem>
-                    <CarouselItem className="basis-1/4 pl-3">
+                    <CarouselItem className="basis-full md:basis-1/2 lg:basis-1/4 pl-3">
                         <ProductCard />
                     </CarouselItem>
-                    <CarouselItem className="basis-1/4 pl-3">
+                    <CarouselItem className="basis-full md:basis-1/2 lg:basis-1/4 pl-3">
                         <ProductCard />
                     </CarouselItem>
                 </CarouselContent>
