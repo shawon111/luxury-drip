@@ -37,19 +37,19 @@ const Footer = () => {
                                 <div className="col-span-1">
                                     <h3 className="text-[13px] font-[500] text-[#fff] uppercase mb-[27px]">Support</h3>
                                     <ul className="text-[13px] font-[400] text-[#fff]">
-                                        <li className="mb-[10px] text-base text-[#ffffffc9]"><a href="#">Contact Us</a></li>
-                                        <li className="mb-[10px] text-base text-[#ffffffc9]"><a href="mailto:info@luxury-drip.com">Shipping & Returns</a></li>
+                                        <li className="mb-[10px] text-base text-[#ffffffc9]">Contact Us</li>
+                                        <li className="mb-[10px] text-base text-[#ffffffc9]"><a href="mailto:info@luxury-drip.com">info@luxury-drip.com</a></li>
                                     </ul>
                                 </div>
                                 <div className="col-span-1">
                                     <h3 className="text-[13px] font-[500] text-[#fff] uppercase mb-[27px]">Shop</h3>
                                     <ul className="text-[13px] font-[400] text-[#fff]">
                                         <li className="mb-[10px] text-base text-[#ffffffc9]"><Link href="/faqs">FAQ's</Link></li>
-                                        <li className="mb-[10px] text-base text-[#ffffffc9]"><Link href="#">Terms & Conditions</Link></li>
-                                        <li className="mb-[10px] text-base text-[#ffffffc9]"><Link href="#">Privacy Policy</Link></li>
-                                        <li className="mb-[10px] text-base text-[#ffffffc9]"><Link href="#">Shipping Policy</Link></li>
-                                        <li className="mb-[10px] text-base text-[#ffffffc9]"><Link href="#">Refund Policy</Link></li>
-                                        <li className="mb-[10px] text-base text-[#ffffffc9]"><Link href="#">Cash on Delivery Policy</Link></li>
+                                        <li className="mb-[10px] text-base text-[#ffffffc9]"><Link href="/terms-conditions">Terms & Conditions</Link></li>
+                                        <li className="mb-[10px] text-base text-[#ffffffc9]"><Link href="/privacy-policy">Privacy Policy</Link></li>
+                                        <li className="mb-[10px] text-base text-[#ffffffc9]"><Link href="/shipping-policy">Shipping Policy</Link></li>
+                                        <li className="mb-[10px] text-base text-[#ffffffc9]"><Link href="/refund-policy">Refund Policy</Link></li>
+                                        <li className="mb-[10px] text-base text-[#ffffffc9]"><Link href="/cash-on-delivery-cod-policy">Cash on Delivery Policy</Link></li>
                                     </ul>
                                 </div>
                                 <div className="col-span-1"></div>
