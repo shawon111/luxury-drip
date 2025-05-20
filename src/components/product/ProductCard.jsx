@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/select";
 import { Eye } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const ProductCard = () => {
   return (
@@ -22,13 +23,15 @@ const ProductCard = () => {
 
       {/* Product Image */}
       <div className="relative z-0">
-        <Image
-          src="/products/example-product-image.jpg"
-          alt="Product Image"
-          width={512}
-          height={493}
-          className="w-full h-auto object-cover"
-        />
+        <Link href="products/234">
+          <Image
+            src="/products/example-product-image.jpg"
+            alt="Product Image"
+            width={512}
+            height={493}
+            className="w-full h-auto object-cover"
+          />
+        </Link>
       </div>
 
       {/* Card Content that slides up on hover */}
