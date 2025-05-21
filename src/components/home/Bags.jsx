@@ -2,7 +2,7 @@ import ProductCarousel from "../product/ProductCarousel";
 
 const Bags = () => {
     return (
-        <section className="bg-white">
+        <section className="bg-white pt-[50px] pb-[95px]">
             <h2 className="text-[29px] font-[500] text-[#111111] uppercase text-center">Bags</h2>
             <div className="mt-10 mb-5">
                 <ProductCarousel />

@@ -17,6 +17,7 @@ export default function Home() {
         <section className="bg-[url('/images/home-hero-bg-mobile.webp')] bg-cover bg-center h-[489px] md:h-[817px] block lg:hidden">
         </section>
         <BestSellers />
+        <Tshirts />
         <section>
           <a href="#" className="flex justify-center items-center">
             <Image
@@ -30,9 +31,8 @@ export default function Home() {
         </section>
         <ShoesCategories />
         <JeansDsq />
-        <DenimTears />
+        {/* <DenimTears /> */}
         <GuaranteeBanner />
-        <Tshirts />
         <Bags />
         <FeaturesBanner />
       </main>
