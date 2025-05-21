@@ -9,7 +9,7 @@ import Image from 'next/image';
 const ProductMain = ({ product}) => {
     const { title, originalPrice, discountedPrice, featuredImages } = product;
     return (
-        <section className=''>
+        <section className='pb-[80px]'>
             <div className="max-w-full lg:max-w-[1170px] mx-auto px-[10px] lg:px-0">
                 <div className="grid grid-cols-1 md:grid-cols-2">
                     <div className='col-span-1 pl-0 mdpl-[40px] lg:pl-[85px]'>

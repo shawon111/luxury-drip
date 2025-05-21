@@ -17,12 +17,12 @@ const CategoryPage = async({params}) => {
     const selectedCategory = categories.find(category => category.slug === slug);
     const {name, query} = selectedCategory || {};
     if (!name) {
-        return <div>Category not found</div>;
+        return <div className="pt-[60px] pb-[80px] px-[40px]">Category not found</div>;
     }
     // fetch products based on the query
     const products = await fetchCategoryProducts(query, 1, false);
     if (!products || products.length === 0) {
-        return <div>No products found</div>;
+        return <div className="pt-[60px] pb-[80px] px-[40px]">No products found</div>;
     }
     return (
         <div className="pt-[60px] pb-[80px]">
@@ -39,7 +39,7 @@ const CategoryPage = async({params}) => {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[20px]">
                         {
                             products.map((product) => (
-                                <ProductCard key={product.id} product={product} />
+                                <ProductCard category=" " key={product.productId} product={product} />
                             ))
                         }
                     </div>

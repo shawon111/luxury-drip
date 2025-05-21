@@ -6,6 +6,7 @@ import JeansDsq from "@/components/home/JeansDsq";
 import ShoesCategories from "@/components/home/ShoesCategories";
 import Tshirts from "@/components/home/Tshirts";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
         <BestSellers />
         <Tshirts />
         <section>
-          <a href="#" className="flex justify-center items-center">
+          <Link href="/products" className="flex justify-center items-center">
             <Image
               width={1280}
               height={400}
@@ -26,7 +27,7 @@ export default function Home() {
               src="/images/summer-cta-banner.jpeg"
               className="w-full h-auto object-cover"
             />
-          </a>
+          </Link>
         </section>
         <ShoesCategories />
         <JeansDsq />

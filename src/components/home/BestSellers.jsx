@@ -96,7 +96,7 @@ const BestSellers = () => {
                 <ProductCarousel category="Best Sellers" products={products} />
             </div>
             <div className="text-center mt-[70px]">
-                <Link href="/shop" className="px-[20px] py-[10px] leading-4 text-base font-[500] text-white bg-[#111111] uppercase">Load More</Link>
+                <Link href="/products" className="px-[20px] py-[10px] leading-4 text-base font-[500] text-white bg-[#111111] uppercase">Load More</Link>
             </div>
         </section>
     );

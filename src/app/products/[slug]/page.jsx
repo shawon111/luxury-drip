@@ -15,7 +15,7 @@ const SingleProductPage = async({ params }) => {
         <div>
             <ProductBreadCrumb title={title} />
             <ProductMain product={product} />
-            <RelatedProducts />
+            {/* <RelatedProducts /> */}
         </div>
     );
 };
