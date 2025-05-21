@@ -4,7 +4,7 @@ import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
 import ProductCard from "./ProductCard";
 import { useRef } from "react";
 
-const ProductCarousel = ({ products }) => {
+const ProductCarousel = ({ products, category }) => {
     const plugin = useRef(
         Autoplay({ delay: 3000, stopOnInteraction: true })
     );
@@ -15,7 +15,7 @@ const ProductCarousel = ({ products }) => {
                     {
                         products && products.map((product, index) => (
                             <CarouselItem key={index} className="basis-full md:basis-1/2 lg:basis-1/4 pl-3">
-                                <ProductCard product={product} />
+                                <ProductCard category={category} product={product} />
                             </CarouselItem>
                         ))
                     }

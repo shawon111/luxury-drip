@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ProductCarousel from "../product/ProductCarousel";
 
 const BestSellers = () => {
@@ -95,7 +96,7 @@ const BestSellers = () => {
                 <ProductCarousel category="Best Sellers" products={products} />
             </div>
             <div className="text-center mt-[70px]">
-                <a className="px-[20px] py-[10px] leading-4 text-base font-[500] text-white bg-[#111111] uppercase" href="#">Load More</a>
+                <Link href="/shop" className="px-[20px] py-[10px] leading-4 text-base font-[500] text-white bg-[#111111] uppercase">Load More</Link>
             </div>
         </section>
     );
