@@ -1,7 +1,9 @@
+import { BaseUrl } from "./BaseUrl";
+
 export const fetchProductData = async (productId) => {
     try {
         const response = await fetch(
-        'http://localhost:3000/products.json'
+        `${BaseUrl}/products.json`
         );
 
         const products = await response.json();

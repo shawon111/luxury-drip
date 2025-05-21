@@ -14,7 +14,7 @@ const ProductsPage = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch("/products.json"); // fetch from public folder
+        const response = await fetch("/products.json");
         if (!response.ok) {
           throw new Error("Failed to fetch product data");
         }

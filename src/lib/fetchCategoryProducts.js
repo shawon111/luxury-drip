@@ -1,6 +1,8 @@
+import { BaseUrl } from "./BaseUrl";
+
 export const fetchCategoryProducts = async (query, page = 1, home = false) => {
   try {
-    const response = await fetch('http://localhost:3000/products.json');
+    const response = await fetch(`${BaseUrl}/products.json`);
 
     if (!response.ok) {
       throw new Error('Failed to fetch product data');
