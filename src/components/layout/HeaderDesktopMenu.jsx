@@ -16,7 +16,7 @@ const HeaderDesktopMenu = () => {
         { name: 'Contact', link: '/contact' },
     ];
     return (
-        <div className="bg-[#1f1f1f] min-h-[62px] flex items-center justify-center">
+        <div className="bg-[#1f1f1f] min-h-[62px] hidden xl:flex items-center justify-center">
             <div>
                 <nav>
                     <ul className="flex justify-center items-center space-x-8">

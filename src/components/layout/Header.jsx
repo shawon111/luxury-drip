@@ -1,15 +1,17 @@
-import React from 'react';
 import HeaderTopBar from './HeaderTopBar';
 import HeaderDesktopMenu from './HeaderDesktopMenu';
 import Image from 'next/image';
+import MobileMenuWrapper from './MobileMenuWrapper';
 
 const Header = () => {
     return (
         <header>
             <HeaderTopBar />
-            <div className='bg-white py-[14px]'>
+            <div className='bg-white py-[14px] px-[15px] xl:px-0'>
                 <div className="container flex justify-between items-center mx-auto">
-                    <div></div>
+                    <div>
+                        <MobileMenuWrapper />
+                    </div>
                     <div>
                         <Image
                             src={'/images/luxury-drip-logo.png'}
