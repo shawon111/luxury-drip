@@ -6,20 +6,21 @@ import { Button } from '../ui/button';
 import { FaWhatsapp } from 'react-icons/fa6';
 import Image from 'next/image';
 
-const ProductMain = () => {
+const ProductMain = ({ product}) => {
+    const { title, originalPrice, discountedPrice, featuredImages } = product;
     return (
         <section className=''>
             <div className="max-w-full lg:max-w-[1170px] mx-auto px-[10px] lg:px-0">
                 <div className="grid grid-cols-1 md:grid-cols-2">
                     <div className='col-span-1 pl-0 mdpl-[40px] lg:pl-[85px]'>
-                        <InnerImageZoom src="/products/example-product-image.jpg" zoomSrc="/products/example-product-image.jpg" zoomScale={1.5} zoomType="hover" />
+                        <InnerImageZoom src={featuredImages[0]} zoomSrc={featuredImages[0]} zoomScale={1.5} zoomType="hover" />
                     </div>
                     <div className='col-span-1 pl-0 md:pl-[50px] lg:pl-[100px]'>
                         <h1 className='text-[28px] font-[500] leading-[1.33em] text-[#111111] uppercase mb-[13px]'>
-                            Product Name
+                            {title}
                         </h1>
                         <h3 className='text-[24px] font-[500] leading-[1.5em] mb-[20px]'>
-                            <span className='line-through text-[#a0a0a0]'>89.99 €</span><span className='text-black ms-5'>75.99 €</span>
+                            <span className='line-through text-[#a0a0a0] text-[18px]'>{originalPrice}</span><span className='text-black ms-5'>{discountedPrice}</span>
                         </h3>
                         <div>
                             <p className='text-base text-[#111111] leading-[1.5] mb-[20px]'>Size</p>
@@ -31,9 +32,11 @@ const ProductMain = () => {
                                     />
                                 </SelectTrigger>
                                 <SelectContent>
-                                    <SelectItem value="s">Small</SelectItem>
-                                    <SelectItem value="m">Medium</SelectItem>
-                                    <SelectItem value="l">Large</SelectItem>
+                                    <SelectItem value="l">L</SelectItem>
+                                    <SelectItem value="m">M</SelectItem>
+                                    <SelectItem value="s">S</SelectItem>
+                                    <SelectItem value="xl">XL</SelectItem>
+                                    <SelectItem value="xs">XS</SelectItem>
                                 </SelectContent>
                             </Select>
                             <Button className="text-sm font-[400] text-white uppercase mt-6 rounded-none min-h-[50px]"><a target='_blank' href="https://wa.me/01890551410">Whatsapp us to order</a></Button>

@@ -12,23 +12,32 @@ import {
 import { Eye } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { discountPercentage } from "@/lib/discountPercentage";
+import { parseEuroPrice } from "@/lib/parseEuroPrice";
 
-const ProductCard = () => {
+const ProductCard = ({ product, category }) => {
+  const { title, originalPrice, discountedPrice, featuredImages, productId } =
+    product;
+  // Calculate discount percentage
+  const discount = discountPercentage(
+    parseEuroPrice(originalPrice),
+    parseEuroPrice(discountedPrice)
+  );
   return (
     <Card className="w-full h-[fit-content] relative shadow-none border-0 group overflow-hidden gap-0">
       {/* Discount badge */}
       <div className="absolute top-2 left-2 bg-[#1f1f1f] text-white text-[11px] font-semibold py-[5px] px-[11px] z-10 text-center leading-[1em]">
-        - 50%
+        - {discount}%
       </div>
 
       {/* Product Image */}
       <div className="relative z-0">
-        <Link href="/products/234">
+        <Link href={`/products/${productId}`}>
           <Image
-            src="/products/example-product-image.jpg"
-            alt="Product Image"
-            width={512}
-            height={493}
+            src={featuredImages[0]}
+            alt={productId}
+            width={600}
+            height={600}
             className="w-full h-auto object-cover"
           />
         </Link>
@@ -40,22 +49,22 @@ const ProductCard = () => {
           <div className="flex flex-col gap-[5px]">
             {/* Title */}
             <h3 className="text-[16px] font-[500] uppercase tracking-wide text-[#111111]">
-              <Link href="/products/234">T-SHIRT CRTZ</Link>
+              <Link href={`/products/${productId}`}>{title}</Link>
             </h3>
 
             {/* Subtitle */}
             <p className="text-[14px] uppercase text-[#767676] leading-[21px] mt-1">
-              <Link href="/products/234">Best Seller</Link>
+              {category}
             </p>
           </div>
 
           {/* Prices */}
           <div className="flex items-center gap-[5px] flex-col">
             <p className="text-[16px] font-[500] leading-[24px] line-through text-[#a6a6a6]">
-              89,99 €
+              {originalPrice}
             </p>
             <p className="text-[16px] text-[#ff2c2c] leading-[24px] font-[500]">
-              44,99 €
+              {discountedPrice}
             </p>
           </div>
         </div>
@@ -70,9 +79,11 @@ const ProductCard = () => {
               />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="s">Small</SelectItem>
-              <SelectItem value="m">Medium</SelectItem>
-              <SelectItem value="l">Large</SelectItem>
+              <SelectItem value="l">L</SelectItem>
+              <SelectItem value="m">M</SelectItem>
+              <SelectItem value="s">S</SelectItem>
+              <SelectItem value="xl">XL</SelectItem>
+              <SelectItem value="xs">XS</SelectItem>
             </SelectContent>
           </Select>
         </div>
@@ -80,8 +91,8 @@ const ProductCard = () => {
         {/* Add to Cart Button & Eye Icon */}
         <div className="flex items-center justify-between mt-[20px]">
           <Button className="uppercase bg-transparent border-0 text-[#111111] shadow-none hover:bg-transparent hover:text-[#111111] hover:shadow-none hover:border-0 p-0 text-[16px] font-[500] leading-[1em]">
-            
-            <Link href="/products/234">Add to Cart</Link>
+
+            <Link href={`/products/${productId}`}>Add to Cart</Link>
           </Button>
           <Eye className="w-4 h-4" />
         </div>

@@ -4,7 +4,7 @@ import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
 import ProductCard from "./ProductCard";
 import { useRef } from "react";
 
-const ProductCarousel = () => {
+const ProductCarousel = ({ products }) => {
     const plugin = useRef(
         Autoplay({ delay: 3000, stopOnInteraction: true })
     );
@@ -12,21 +12,13 @@ const ProductCarousel = () => {
         <div>
             <Carousel plugins={[plugin.current]}>
                 <CarouselContent className="-ml-3">
-                    <CarouselItem className="basis-full md:basis-1/2 lg:basis-1/4 pl-3">
-                        <ProductCard />
-                    </CarouselItem>
-                    <CarouselItem className="basis-full md:basis-1/2 lg:basis-1/4 pl-3">
-                        <ProductCard />
-                    </CarouselItem>
-                    <CarouselItem className="basis-full md:basis-1/2 lg:basis-1/4 pl-3">
-                        <ProductCard />
-                    </CarouselItem>
-                    <CarouselItem className="basis-full md:basis-1/2 lg:basis-1/4 pl-3">
-                        <ProductCard />
-                    </CarouselItem>
-                    <CarouselItem className="basis-full md:basis-1/2 lg:basis-1/4 pl-3">
-                        <ProductCard />
-                    </CarouselItem>
+                    {
+                        products && products.map((product, index) => (
+                            <CarouselItem key={index} className="basis-full md:basis-1/2 lg:basis-1/4 pl-3">
+                                <ProductCard product={product} />
+                            </CarouselItem>
+                        ))
+                    }
                 </CarouselContent>
             </Carousel>
         </div>

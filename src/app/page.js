@@ -1,6 +1,5 @@
 import Bags from "@/components/home/Bags";
 import BestSellers from "@/components/home/BestSellers";
-import DenimTears from "@/components/home/DenimTears";
 import FeaturesBanner from "@/components/home/FeaturesBanner";
 import GuaranteeBanner from "@/components/home/GuaranteeBanner";
 import JeansDsq from "@/components/home/JeansDsq";
@@ -31,7 +30,6 @@ export default function Home() {
         </section>
         <ShoesCategories />
         <JeansDsq />
-        {/* <DenimTears /> */}
         <GuaranteeBanner />
         <Bags />
         <FeaturesBanner />
