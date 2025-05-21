@@ -68,9 +68,10 @@ const ProductsPage = () => {
 
                 {displayedProducts.length < products.length && (
                   <div className="text-center mt-8">
+                    <p className="mb-2 text-[#767676] text-[15px]">Showing {displayedProducts.length} of {products.length} products</p>
                     <button
                       onClick={handleLoadMore}
-                      className="px-6 py-3 bg-black text-white rounded hover:bg-gray-800 cursor-pointer"
+                      className="px-6 py-3 bg-white text-black cursor-pointer rounded-none border border-[#111111]"
                     >
                       Load More
                     </button>
