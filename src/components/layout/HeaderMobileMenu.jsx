@@ -15,21 +15,20 @@ import { useState } from "react";
 
 const menuItems = [
     { name: 'Home', link: '/' },
-    { name: 'Best Seller', link: '/best-seller' },
+    { name: 'Best Seller', link: '/products' },
     {
-        name: 'Accessories', link: '#', submenu: [
-            { name: 'Hats', link: '/accessories/hats' },
-            { name: 'Bags', link: '/accessories/bags' },
-            { name: 'Sunglasses', link: '/accessories/sunglasses' },
-        ]
+        name: 'T-shirts', link: '/products/category/t-shirts'
     },
     {
-        name: 'Hoodies', link: '#', submenu: [
-            { name: 'LV', link: '/hoodies/lv' },
-            { name: 'DIOR', link: '/hoodies/dior' },
+        name: 'Shoes', link: '#', submenu: [
+            { name: 'Louis Vuitton', link: '/products/category/lv' },
+            { name: 'Air Jordan 4', link: '/products/category/j4' },
+            { name: 'Campus', link: '/products/category/campus' },
+            { name: 'J4', link: '/products/category/yeezy' },
         ]
     },
-    { name: 'Contact', link: '/contact' },
+    { name: 'Jeans', link: '/products/category/jeans' },
+    { name: 'Bags', link: '/products/category/bags' },
 ];
 
 export function HeaderMobileMenu() {

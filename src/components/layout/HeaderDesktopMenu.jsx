@@ -2,19 +2,22 @@ import Link from "next/link";
 
 const HeaderDesktopMenu = () => {
     const menuItems = [
-        { name: 'Home', link: '/' },
-        { name: 'Best Seller', link: '/best-seller' },
-        { name: 'Accessories', link: '#', submenu: [
-            { name: 'Hats', link: '/accessories/hats' },
-            { name: 'Bags', link: '/accessories/bags' },
-            { name: 'Sunglasses', link: '/accessories/sunglasses' },
-        ] },
-        { name: 'Hoodies', link: '#', submenu: [
-            { name: 'LV', link: '/hoodies/lv' },
-            { name: 'DIOR', link: '/hoodies/dior' },
-        ] },
-        { name: 'Contact', link: '/contact' },
-    ];
+    { name: 'Home', link: '/' },
+    { name: 'Best Seller', link: '/products' },
+    {
+        name: 'T-shirts', link: '/products/category/t-shirts'
+    },
+    {
+        name: 'Shoes', link: '#', submenu: [
+            { name: 'Louis Vuitton', link: '/products/category/lv' },
+            { name: 'Air Jordan 4', link: '/products/category/j4' },
+            { name: 'Campus', link: '/products/category/campus' },
+            { name: 'J4', link: '/products/category/yeezy' },
+        ]
+    },
+    { name: 'Jeans', link: '/products/category/jeans' },
+    { name: 'Bags', link: '/products/category/bags' },
+];
     return (
         <div className="bg-[#1f1f1f] min-h-[62px] hidden xl:flex items-center justify-center">
             <div>
