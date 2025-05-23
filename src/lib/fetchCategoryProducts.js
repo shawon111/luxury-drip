@@ -1,6 +1,6 @@
 import { BaseUrl } from "./BaseUrl";
 
-export const fetchCategoryProducts = async (query, page = 1, home = false) => {
+export const fetchCategoryProducts = async (query, home = false) => {
   try {
     const response = await fetch(`${BaseUrl}/products.json`);
 
@@ -14,12 +14,10 @@ export const fetchCategoryProducts = async (query, page = 1, home = false) => {
     const normalize = (str) =>
       str
         .toLowerCase()
-        .normalize("NFD") // Remove diacritics like é → e
+        .normalize("NFD")
         .replace(/[\u0300-\u036f]/g, "")
         .replace(/\s+/g, " ")
         .trim();
-
-    const limit = home ? 8 : 16;
 
     const searchWords = normalize(query).split(" ");
 
@@ -28,8 +26,12 @@ export const fetchCategoryProducts = async (query, page = 1, home = false) => {
       return searchWords.some((word) => normalizedTitle.includes(word));
     });
 
-    const startIndex = (page - 1) * limit;
-    return filtered.slice(startIndex, startIndex + limit);
+    if (home) {
+      const limit = 8;
+      return filtered.slice(0, limit);
+    }
+
+    return filtered;
   } catch (error) {
     console.error("Error searching products:", error);
     return [];

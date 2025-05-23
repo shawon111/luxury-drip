@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import ProductCard from "@/components/product/ProductCard";
 import Link from "next/link";
 
-const PRODUCTS_PER_PAGE = 24;
+const PRODUCTS_PER_PAGE = 16;
 
 const ProductsPage = () => {
   const [products, setProducts] = useState([]);

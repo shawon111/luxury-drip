@@ -1,29 +1,53 @@
+"use client";
 import ProductCard from "@/components/product/ProductCard";
 import { fetchCategoryProducts } from "@/lib/fetchCategoryProducts";
 import Link from "next/link";
+import { useParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const categories = [
-        {name: 'T-shirts', slug: 't-shirts', query: 't-shirt'},
-        {name: 'Air Jordan 4', slug: 'j4', query: 'j4 jordan'},
-        {name: 'Louis Vuitton', slug: 'lv', query: 'trainer skate cinturino'},
-        {name: 'Yeezy Boost 350', slug: 'yeezy', query: 'yzy'},
-        {name: 'Campus', slug: 'campus', query: 'campus'},
-        {name: 'DSQ2 JEANS', slug: 'jeans', query: 'jeans'},
-        {name: 'Bag', slug: 'bags', query: 'bag'},
-    ]
+    { name: 'T-shirts', slug: 't-shirts', query: 't-shirt' },
+    { name: 'Air Jordan 4', slug: 'j4', query: 'j4 jordan' },
+    { name: 'Louis Vuitton', slug: 'lv', query: 'trainer skate cinturino' },
+    { name: 'Yeezy Boost 350', slug: 'yeezy', query: 'yzy' },
+    { name: 'Campus', slug: 'campus', query: 'campus' },
+    { name: 'DSQ2 JEANS', slug: 'jeans', query: 'jeans' },
+    { name: 'Bag', slug: 'bags', query: 'bag' },
+]
 
-const CategoryPage = async({params}) => {
-    const {slug} = await params;
+const PRODUCTS_PER_PAGE = 16;
+
+const CategoryPage = () => {
+    // get the slug from the params
+    const params = useParams()
+    const { slug } = params;
     const selectedCategory = categories.find(category => category.slug === slug);
-    const {name, query} = selectedCategory || {};
+    const { name, query } = selectedCategory || {};
     if (!name) {
         return <div className="pt-[60px] pb-[80px] px-[40px]">Category not found</div>;
     }
+    // products state
+    const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
+
     // fetch products based on the query
-    const products = await fetchCategoryProducts(query, 1, false);
-    if (!products || products.length === 0) {
-        return <div className="pt-[60px] pb-[80px] px-[40px]">No products found</div>;
-    }
+    useEffect(() => {
+        const fetchProducts = async () => {
+            const products = await fetchCategoryProducts(query, false);
+            setProducts(products);
+        };
+
+        fetchProducts();
+        setLoading(false);
+    }, []);
+
+    // pagination
+    const [visibleCount, setVisibleCount] = useState(1); // page count
+    const displayedProducts = products.slice(0, visibleCount * PRODUCTS_PER_PAGE);
+    const handleLoadMore = () => {
+        setVisibleCount((prev) => prev + 1);
+    };
+
     return (
         <div className="pt-[60px] pb-[80px]">
             <div className="px-[10px] lg:px-[50px] xl:px-[100] max-w-[1900px] mx-auto">
@@ -37,12 +61,32 @@ const CategoryPage = async({params}) => {
                 </div>
                 <div className="mt-[55px]">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[20px]">
-                        {
-                            products.map((product) => (
-                                <ProductCard category=" " key={product.productId} product={product} />
-                            ))
-                        }
+                        {loading ? (
+                            <p className="text-center">Loading products...</p>
+                        ) : (
+                            <>
+
+                                {displayedProducts.map((product) => (
+                                    <ProductCard
+                                        category={name}
+                                        key={product.productId}
+                                        product={product}
+                                    />
+                                ))}
+                            </>
+                        )}
                     </div>
+                    {displayedProducts.length < products.length && (
+                        <div className="text-center mt-8">
+                            <p className="mb-2 text-[#767676] text-[15px]">Showing {displayedProducts.length} of {products.length} products</p>
+                            <button
+                                onClick={handleLoadMore}
+                                className="px-6 py-3 bg-white text-black cursor-pointer rounded-none border border-[#111111]"
+                            >
+                                Load More
+                            </button>
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
