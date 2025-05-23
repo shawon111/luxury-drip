@@ -1,6 +1,6 @@
 import { BaseUrl } from "./BaseUrl";
 
-export const fetchCategoryProducts = async (query, home = false) => {
+export const fetchCategoryProducts = async (query, home = false, campus = false) => {
   try {
     const response = await fetch(`${BaseUrl}/products.json`);
 
@@ -22,8 +22,9 @@ export const fetchCategoryProducts = async (query, home = false) => {
     const searchWords = normalize(query).split(" ");
 
     const filtered = allProducts.filter((product) => {
-      const normalizedTitle = normalize(product.title);
-      return searchWords.some((word) => normalizedTitle.includes(word));
+      const fieldToSearch = campus ? product.category : product.title;
+      const normalizedField = normalize(fieldToSearch);
+      return searchWords.some((word) => normalizedField.includes(word));
     });
 
     if (home) {

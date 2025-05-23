@@ -33,8 +33,13 @@ const CategoryPage = () => {
     // fetch products based on the query
     useEffect(() => {
         const fetchProducts = async () => {
-            const products = await fetchCategoryProducts(query, false);
-            setProducts(products);
+            if(query==="campus"){
+                const response = await fetchCategoryProducts(query, false, true);
+                setProducts(response);
+            }else {
+                const response = await fetchCategoryProducts(query, false);
+                setProducts(response);
+            }
         };
 
         fetchProducts();
