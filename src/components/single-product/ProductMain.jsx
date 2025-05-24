@@ -6,7 +6,7 @@ import { Button } from '../ui/button';
 import { FaWhatsapp } from 'react-icons/fa6';
 import Image from 'next/image';
 
-const ProductMain = ({ product}) => {
+const ProductMain = ({ product, translations}) => {
     const { title, originalPrice, discountedPrice, featuredImages } = product;
     return (
         <section className='pb-[80px]'>
@@ -39,7 +39,7 @@ const ProductMain = ({ product}) => {
                                     <SelectItem value="xs">XS</SelectItem>
                                 </SelectContent>
                             </Select>
-                            <Button className="text-sm font-[400] text-white uppercase mt-6 rounded-none min-h-[50px]"><a target='_blank' href="https://wa.me/01890551410">Whatsapp us to order</a></Button>
+                            <Button className="text-sm font-[400] text-white uppercase mt-6 rounded-none min-h-[50px]"><a target='_blank' href="https://wa.me/01890551410">{translations.whats_app_btn}</a></Button>
                             <a target='_blank' href="https://wa.me/01890551410" className="flex items-center gap-2 mt-4">
                                 <FaWhatsapp size={22} className="text-black" />
                                 +1097889375

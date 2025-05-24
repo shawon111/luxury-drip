@@ -1,0 +1,28 @@
+{
+    "btn_load_more": "CARICA DI PIÙ",
+    "section_title": {
+        "best_sellers": "I Più Venduti",
+        "t_shirts": "T-SHIRT",
+        "jeans": "Jeans DSQ2",
+        "bags": "Borse",
+        "services": "MIGLIOR SERVIZIO CLIENTI",
+        "newsletter": "Iscriviti alla nostra Newsletter",
+        "shop": "Negozio"
+    },
+    "whats_app_btn": "Scrivici su WhatsApp per ordinare",
+    "menu": {
+        "home": "Home",
+        "best_seller": "Best Seller",
+        "t_shirts": "T-shirt",
+        "shoes": "Scarpe",
+        "faq": "FAQ's",
+        "jeans": "Jeans",
+        "bags": "Borse",
+        "terms": "Termini e Condizioni",
+        "privacy": "Informativa sulla Privacy",
+        "refunds": "Politica di Rimborso",
+        "shipping": "Politica di Spedizione",
+        "cash": "Politica di Pagamento alla Consegna"
+    },
+    "header_top": "Per qualsiasi informazione scrivici su Instagram"
+}

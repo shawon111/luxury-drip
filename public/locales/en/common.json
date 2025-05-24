@@ -1,0 +1,28 @@
+{
+    "btn_load_more": "Load more",
+    "section_title": {
+        "best_sellers": "Best Sellers",
+        "t_shirts": "T-Shirts",
+        "jeans": "DSQ2 JEANS",
+        "bags": "Bags",
+        "services": "BEST CUSTOMER SERVICE",
+        "newsletter": "Subscribe To Our Newsletter",
+        "shop": "Shop"
+    },
+    "whats_app_btn": "WhatsApp Us To Order",
+    "menu": {
+        "home": "Home",
+        "best_seller": "Best Seller",
+        "t_shirts": "T-shirts",
+        "shoes": "Shoes",
+        "faq": "FAQ's",
+        "jeans": "Jeans",
+        "bags": "Bags",
+        "terms": "Terms & Conditions",
+        "privacy": "Privacy Policy",
+        "refunds": "Refund Policy",
+        "shipping": "Shipping Policy",
+        "cash": "Cash On Delivery Policy"
+    },
+    "header_top": "For any info Text Us on Instagram"
+}

@@ -8,28 +8,11 @@ import {
     SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet"
+import { useTranslation } from "@/contexts/TranslationContext";
 import { ChevronDown, Menu } from "lucide-react"
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-
-const menuItems = [
-    { name: 'Home', link: '/' },
-    { name: 'Best Seller', link: '/products' },
-    {
-        name: 'T-shirts', link: '/products/category/t-shirts'
-    },
-    {
-        name: 'Shoes', link: '#', submenu: [
-            { name: 'Louis Vuitton', link: '/products/category/lv' },
-            { name: 'Air Jordan 4', link: '/products/category/j4' },
-            { name: 'Campus', link: '/products/category/campus' },
-            { name: 'J4', link: '/products/category/yeezy' },
-        ]
-    },
-    { name: 'Jeans', link: '/products/category/jeans' },
-    { name: 'Bags', link: '/products/category/bags' },
-];
 
 export function HeaderMobileMenu() {
     const [openMenus, setOpenMenus] = useState({});
@@ -39,6 +22,27 @@ export function HeaderMobileMenu() {
             [name]: !prev[name],
         }));
     };
+
+    // Load translations
+    const translations = useTranslation();
+    const menuItems = [
+        { name: translations.menu.home, link: '/' },
+        { name: translations.menu.best_seller, link: '/products' },
+        {
+            name: translations.menu.t_shirts, link: '/products/category/t-shirts'
+        },
+        {
+            name: translations.menu.shoes, link: '#', submenu: [
+                { name: 'Louis Vuitton', link: '/products/category/lv' },
+                { name: 'Air Jordan 4', link: '/products/category/j4' },
+                { name: 'Campus', link: '/products/category/campus' },
+                { name: 'J4', link: '/products/category/yeezy' },
+            ]
+        },
+        { name: translations.menu.jeans, link: '/products/category/jeans' },
+        { name: translations.menu.bags, link: '/products/category/bags' },
+    ];
+
     return (
         <Sheet>
             <SheetTrigger className="xl:hidden" asChild>

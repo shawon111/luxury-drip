@@ -2,6 +2,9 @@ import Header from "@/components/layout/Header";
 import "./globals.css";
 import Footer from "@/components/layout/Footer";
 import { Jost } from "next/font/google"
+import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
+import { TranslationProvider } from "@/contexts/TranslationContext";
+import { loadCommonTranslations } from "@/lib/loadCommonTranslations";
 
 export const metadata = {
   title: "Luxury Drip - Best drip at the Best price!",
@@ -10,18 +13,22 @@ export const metadata = {
 // font
 const jost = Jost({
   subsets: ["latin"],
-  weight: ["300","400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
   variable: '--font-jost'
 })
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const { translations } = await loadCommonTranslations();
   return (
     <html lang="en">
-      <body className={`${jost.className}`} suppressHydrationWarning={true}>
-        <Header />
-        {children}
-        <Footer />
-      </body>
+      <TranslationProvider translations={translations}>
+        <body className={`${jost.className} relative`} suppressHydrationWarning={true}>
+          <LanguageSwitcher />
+          <Header />
+          {children}
+          <Footer />
+        </body>
+      </TranslationProvider>
     </html>
   );
 }

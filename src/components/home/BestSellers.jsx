@@ -1,7 +1,10 @@
 import Link from "next/link";
 import ProductCarousel from "../product/ProductCarousel";
+import { loadCommonTranslations } from "@/lib/loadCommonTranslations";
 
-const BestSellers = () => {
+const BestSellers = async() => {
+    const { translations } = await loadCommonTranslations();
+
     const products = [
         {
             "productId": "skate-red-999",
@@ -91,12 +94,12 @@ const BestSellers = () => {
 
     return (
         <section className="bg-white pt-[50px] pb-[95px]">
-            <h2 className="text-[29px] font-[500] text-[#111111] uppercase text-center">Best Sellers</h2>
+            <h2 className="text-[29px] font-[500] text-[#111111] uppercase text-center">{translations.section_title.best_sellers}</h2>
             <div className="mt-10 mb-5">
                 <ProductCarousel category="Best Sellers" products={products} />
             </div>
             <div className="text-center mt-[70px]">
-                <Link href="/products" className="px-[20px] py-[10px] leading-4 text-base font-[500] text-white bg-[#111111] uppercase">Load More</Link>
+                <Link href="/products" className="px-[20px] py-[10px] leading-4 text-base font-[500] text-white bg-[#111111] uppercase">{translations.btn_load_more}</Link>
             </div>
         </section>
     );

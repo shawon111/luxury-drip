@@ -1,23 +1,25 @@
+import { loadCommonTranslations } from "@/lib/loadCommonTranslations";
 import Link from "next/link";
 
-const HeaderDesktopMenu = () => {
+const HeaderDesktopMenu = async () => {
+    const { translations } = await loadCommonTranslations();
     const menuItems = [
-    { name: 'Home', link: '/' },
-    { name: 'Best Seller', link: '/products' },
-    {
-        name: 'T-shirts', link: '/products/category/t-shirts'
-    },
-    {
-        name: 'Shoes', link: '#', submenu: [
-            { name: 'Louis Vuitton', link: '/products/category/lv' },
-            { name: 'Air Jordan 4', link: '/products/category/j4' },
-            { name: 'Campus', link: '/products/category/campus' },
-            { name: 'J4', link: '/products/category/yeezy' },
-        ]
-    },
-    { name: 'Jeans', link: '/products/category/jeans' },
-    { name: 'Bags', link: '/products/category/bags' },
-];
+        { name: translations.menu.home, link: '/' },
+        { name: translations.menu.best_seller, link: '/products' },
+        {
+            name: translations.menu.t_shirts, link: '/products/category/t-shirts'
+        },
+        {
+            name: translations.menu.shoes, link: '#', submenu: [
+                { name: 'Louis Vuitton', link: '/products/category/lv' },
+                { name: 'Air Jordan 4', link: '/products/category/j4' },
+                { name: 'Campus', link: '/products/category/campus' },
+                { name: 'J4', link: '/products/category/yeezy' },
+            ]
+        },
+        { name: translations.menu.jeans, link: '/products/category/jeans' },
+        { name: translations.menu.bags, link: '/products/category/bags' },
+    ];
     return (
         <div className="bg-[#1f1f1f] min-h-[62px] hidden xl:flex items-center justify-center">
             <div>

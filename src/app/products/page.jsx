@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import ProductCard from "@/components/product/ProductCard";
 import Link from "next/link";
+import { useTranslation } from "@/contexts/TranslationContext";
 
 const PRODUCTS_PER_PAGE = 16;
 
@@ -37,12 +38,15 @@ const ProductsPage = () => {
     setVisibleCount((prev) => prev + 1);
   };
 
+  // translation
+      const translation = useTranslation();
+
   return (
     <div>
       <div className="pt-[60px] pb-[80px]">
         <div className="px-[10px] lg:px-[50px] xl:px-[100] max-w-[1900px] mx-auto">
           <div>
-            <h1 className="text-center text-[32px] font-[500]">Shop</h1>
+            <h1 className="text-center text-[32px] font-[500]">{translation.section_title.shop}</h1>
             <div className="text-center">
               <p>
                 <Link className="text-[14px] text-[#909090]" href="/">Home</Link> &gt;{" "}
@@ -73,7 +77,7 @@ const ProductsPage = () => {
                       onClick={handleLoadMore}
                       className="px-6 py-3 bg-white text-black cursor-pointer rounded-none border border-[#111111]"
                     >
-                      Load More
+                      {translation.btn_load_more}
                     </button>
                   </div>
                 )}

@@ -1,5 +1,6 @@
 "use client";
 import ProductCard from "@/components/product/ProductCard";
+import { useTranslation } from "@/contexts/TranslationContext";
 import { fetchCategoryProducts } from "@/lib/fetchCategoryProducts";
 import Link from "next/link";
 import { useParams } from "next/navigation";
@@ -53,6 +54,9 @@ const CategoryPage = () => {
         setVisibleCount((prev) => prev + 1);
     };
 
+    // translation
+    const translation = useTranslation();
+
     return (
         <div className="pt-[60px] pb-[80px]">
             <div className="px-[10px] lg:px-[50px] xl:px-[100] max-w-[1900px] mx-auto">
@@ -88,7 +92,7 @@ const CategoryPage = () => {
                                 onClick={handleLoadMore}
                                 className="px-6 py-3 bg-white text-black cursor-pointer rounded-none border border-[#111111]"
                             >
-                                Load More
+                                {translation.btn_load_more}
                             </button>
                         </div>
                     )}

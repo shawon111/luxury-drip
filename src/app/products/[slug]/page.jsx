@@ -2,8 +2,10 @@ import ProductBreadCrumb from "@/components/single-product/ProductBreadCrumb";
 import ProductMain from "@/components/single-product/ProductMain";
 import RelatedProducts from "@/components/single-product/RelatedProducts";
 import { fetchProductData } from "@/lib/fetchProductData";
+import { loadCommonTranslations } from "@/lib/loadCommonTranslations";
 
 const SingleProductPage = async({ params }) => {
+    const { translations } = await loadCommonTranslations();
     const { slug } = await params;
     // Fetch product data based on the slug
     const product = await fetchProductData(slug);
@@ -14,7 +16,7 @@ const SingleProductPage = async({ params }) => {
     return (
         <div>
             <ProductBreadCrumb title={title} />
-            <ProductMain product={product} />
+            <ProductMain translations={translations} product={product} />
             {/* <RelatedProducts /> */}
         </div>
     );
