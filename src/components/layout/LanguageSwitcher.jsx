@@ -24,7 +24,7 @@ export function LanguageSwitcher() {
         }} className="px-[15px] py-[10px] bg-white fixed bottom-[20px] left-[20px] z-50">
             {
                 locale === 'en' ?
-                    <button className="text-[20px] text-[#111111] uppercase" onClick={() => changeLocale('it')}>
+                    <button className="text-[20px] text-[#111111] uppercase flex items-center" onClick={() => changeLocale('it')}>
                         <Image
                             src="/images/it.png"
                             alt="Italian Flag"
@@ -32,8 +32,9 @@ export function LanguageSwitcher() {
                             height={24}
                             className="inline-block mr-2"
                         />
+                        It
                     </button> :
-                    <button className="text-[20px] text-[#111111] uppercase" onClick={() => changeLocale('en')}>
+                    <button className="text-[20px] text-[#111111] uppercase flex items-center" onClick={() => changeLocale('en')}>
                         <Image
                             src="/images/eng.png"
                             alt="English Flag"
@@ -41,6 +42,7 @@ export function LanguageSwitcher() {
                             height={24}
                             className="inline-block mr-2"
                         />
+                        En
                     </button>
             }
         </div>
