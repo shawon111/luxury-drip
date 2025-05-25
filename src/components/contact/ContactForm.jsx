@@ -15,8 +15,8 @@ const ContactForm = () => {
     // translation
     const translation = useTranslation();
     return (
-        <div className="w-full">
-            <form className="flex flex-col max-w-[full] lg:max-w-[1170px] mx-auto gap-3 px-[10px] lg:px-0" ref={formRef} onSubmit={handleSubmit}>
+        <div className="max-w-[full] lg:max-w-[1170px] mx-auto">
+            <form className="flex flex-col gap-3 px-[10px] lg:px-0" ref={formRef} onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
                     <input className="col-span-1 px-[15px] py-[15px] bg-[#fffFFF29] text-white leading-[1em] focus:outline-hidden rounded-sm" type="text" placeholder={translation.form.name} />
                     <input className="col-span-1 px-[15px] py-[15px] bg-[#fffFFF29] text-white leading-[1em] focus:outline-hidden rounded-sm" type="email" placeholder={translation.form.email} />
@@ -30,7 +30,7 @@ const ContactForm = () => {
             <div>
                 {submitted && (
                     <div className="success-message">
-                        {translation.form.success}
+                        <p className="text-[#fff] text-base italic">{translation.form.success}</p>
                     </div>
                 )}
             </div>
