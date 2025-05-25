@@ -39,10 +39,10 @@ const ProductMain = ({ product, translations}) => {
                                     <SelectItem value="xs">XS</SelectItem>
                                 </SelectContent>
                             </Select>
-                            <Button className="text-sm font-[400] text-white uppercase mt-6 rounded-none min-h-[50px]"><a target='_blank' href="https://wa.me/01890551410">{translations.whats_app_btn}</a></Button>
-                            <a target='_blank' href="https://wa.me/01890551410" className="flex items-center gap-2 mt-4">
+                            <Button className="text-sm font-[400] text-white uppercase mt-6 rounded-none min-h-[50px]"><a target='_blank' href="https://wa.me/393508301446">{translations.whats_app_btn}</a></Button>
+                            <a target='_blank' href="https://wa.me/393508301446" className="flex items-center gap-2 mt-4">
                                 <FaWhatsapp size={22} className="text-black" />
-                                +1097889375
+                                +393508301446
                             </a>
                         </div>
                         <div className='mt-[30px]'>

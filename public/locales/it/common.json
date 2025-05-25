@@ -7,12 +7,21 @@
         "bags": "Borse",
         "services": "MIGLIOR SERVIZIO CLIENTI",
         "newsletter": "Iscriviti alla nostra Newsletter",
-        "shop": "Negozio"
+        "shop": "Negozio",
+        "contact": "Contatti"
     },
+    "contact_us_subtitle": "Compila il form sottostante e ti contatteremo al più presto!",
     "whats_app_btn": "Scrivici su WhatsApp per ordinare",
     "menu": {
         "home": "Home",
         "best_seller": "Best Seller",
+        "women": "Donna",
+        "accessories": "Accessori",
+        "sneakers": "Sneakers",
+        "summer_drip": "Goccia Estiva",
+        "clothes": "Abbigliamento",
+        "trapstar": "Trapstar",
+        "corteiz": "Corteiz",
         "t_shirts": "T-shirt",
         "shoes": "Scarpe",
         "faq": "FAQ's",
@@ -22,7 +31,16 @@
         "privacy": "Informativa sulla Privacy",
         "refunds": "Politica di Rimborso",
         "shipping": "Politica di Spedizione",
-        "cash": "Politica di Pagamento alla Consegna"
+        "cash": "Politica di Pagamento alla Consegna",
+        "contact": "Contatti"
     },
-    "header_top": "Per qualsiasi informazione scrivici su Instagram"
+    "header_top": "Per qualsiasi informazione scrivici su Instagram",
+    "form": {
+        "name": "Nome",
+        "email": "E-mail",
+        "phone": "Numero di Telefono",
+        "message": "Messaggio",
+        "send": "Invia",
+        "success": "Messaggio inviato con successo!"
+    }
 }

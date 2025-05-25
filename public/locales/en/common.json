@@ -7,12 +7,21 @@
         "bags": "Bags",
         "services": "BEST CUSTOMER SERVICE",
         "newsletter": "Subscribe To Our Newsletter",
-        "shop": "Shop"
+        "shop": "Shop",
+        "contact": "Contact Us"
     },
+    "contact_us_subtitle": "Fill out the form below and we will contact you as soon as possible!",
     "whats_app_btn": "WhatsApp Us To Order",
     "menu": {
         "home": "Home",
         "best_seller": "Best Seller",
+        "women": "Women",
+        "accessories": "Accessories",
+        "sneakers": "Sneakers",
+        "summer_drip": "Summer Drip",
+        "clothes": "Clothes",
+        "trapstar": "Trapstar",
+        "corteiz": "Corteiz",
         "t_shirts": "T-shirts",
         "shoes": "Shoes",
         "faq": "FAQ's",
@@ -22,7 +31,16 @@
         "privacy": "Privacy Policy",
         "refunds": "Refund Policy",
         "shipping": "Shipping Policy",
-        "cash": "Cash On Delivery Policy"
+        "cash": "Cash On Delivery Policy",
+        "contact": "Contact Us"
     },
-    "header_top": "For any info Text Us on Instagram"
+    "header_top": "For any info Text Us on Instagram", 
+    "form": {
+        "name": "Your Name",
+        "email": "Your Email",
+        "phone": "Phone Number",
+        "message": "Message",
+        "send": "Send",
+        "success": "Thank you for contacting us! We will get back to you soon"
+    }
 }

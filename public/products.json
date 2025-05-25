@@ -1,5 +1,61 @@
 [
   {
+    "productId": "t-shirt-1043",
+    "title": "T-SHIRT",
+    "originalPrice": "89,99 €",
+    "discountedPrice": "54,99 €",
+    "isOnSale": true,
+    "url": "https://www.luxury-drip.com/it/product/t-shirt-104/",
+    "description": "",
+    "featuredImages": [
+      "https://luxury-drip.com/wp-content/uploads/2025/05/1-4_e7af078b-82f1-45e2-a2b4-ccd36b235374_760x.png.webp"
+    ],
+    "category": "t-shirt",
+    "scrapedAt": "2025-05-23T08:38:52.910Z"
+  },
+  {
+    "productId": "t-shirt-1053",
+    "title": "T-SHIRT",
+    "originalPrice": "89,99 €",
+    "discountedPrice": "54,99 €",
+    "isOnSale": true,
+    "url": "https://www.luxury-drip.com/it/product/t-shirt-105/",
+    "description": "",
+    "featuredImages": [
+      "https://luxury-drip.com/wp-content/uploads/2025/05/9-1f64dcec_7b44e6a5-cd92-44c6-9a49-c9ca76738d73_760x.jpg.webp"
+    ],
+    "category": "t-shirt",
+    "scrapedAt": "2025-05-23T08:38:52.910Z"
+  },
+  {
+    "productId": "t-shirt-1033",
+    "title": "T-SHIRT",
+    "originalPrice": "89,99 €",
+    "discountedPrice": "54,99 €",
+    "isOnSale": true,
+    "url": "https://www.luxury-drip.com/it/product/t-shirt-103/",
+    "description": "",
+    "featuredImages": [
+      "https://luxury-drip.com/wp-content/uploads/2025/05/11-84951356_760x.jpg.webp"
+    ],
+    "category": "t-shirt",
+    "scrapedAt": "2025-05-23T08:38:52.910Z"
+  },
+  {
+    "productId": "t-shirt-1023",
+    "title": "T-SHIRT",
+    "originalPrice": "89,99 €",
+    "discountedPrice": "54,99 €",
+    "isOnSale": true,
+    "url": "https://www.luxury-drip.com/it/product/t-shirt-102/",
+    "description": "",
+    "featuredImages": [
+      "https://luxury-drip.com/wp-content/uploads/2025/05/15-8551a76a_760x.jpg.webp"
+    ],
+    "category": "t-shirt",
+    "scrapedAt": "2025-05-23T08:38:52.910Z"
+  },
+  {
     "productId": "bag-9",
     "title": "BAG",
     "originalPrice": "279,99 €",

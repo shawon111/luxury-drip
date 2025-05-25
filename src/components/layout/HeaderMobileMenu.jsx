@@ -29,20 +29,45 @@ export function HeaderMobileMenu() {
         { name: translations.menu.home, link: '/' },
         { name: translations.menu.best_seller, link: '/products' },
         {
-            name: translations.menu.t_shirts, link: '/products/category/t-shirts'
+            name: translations.menu.women, link: '#', submenu: [
+                { name: translations.menu.bags, link: '/products/category/bags' },
+            ]
         },
         {
-            name: translations.menu.shoes, link: '#', submenu: [
+            name: translations.menu.accessories, link: '#', submenu: [
+                { name: translations.menu.bags, link: '/products/category/bags' }
+            ]
+        },
+        {
+            name: translations.menu.sneakers, link: '#', submenu: [
                 { name: 'Louis Vuitton', link: '/products/category/lv' },
                 { name: 'Air Jordan 4', link: '/products/category/j4' },
                 { name: 'Campus', link: '/products/category/campus' },
                 { name: 'J4', link: '/products/category/yeezy' },
             ]
         },
-        { name: translations.menu.jeans, link: '/products/category/jeans' },
-        { name: translations.menu.bags, link: '/products/category/bags' },
+        {
+            name: translations.menu.summer_drip, link: '#', submenu: [
+                { name: translations.menu.t_shirts, link: '/products/category/t-shirts' },]
+        },
+        {
+            name: translations.menu.clothes, link: '#', submenu: [
+                { name: translations.menu.jeans, link: '/products/category/jeans' },]
+        },
+        {
+            name: translations.menu.trapstar, link: '#', submenu: [
+                { name: translations.menu.t_shirts, link: '/products/category/t-shirts' },
+                { name: translations.menu.bags, link: '/products/category/bags' }
+            ]
+        },
+        {
+            name: translations.menu.corteiz, link: '#', submenu: [
+                { name: translations.menu.t_shirts, link: '/products/category/t-shirts' },]
+        },
+        {
+            name: translations.menu.contact, link: '/contact',
+        }
     ];
-
     return (
         <Sheet>
             <SheetTrigger className="xl:hidden" asChild>
