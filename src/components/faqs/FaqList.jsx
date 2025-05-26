@@ -18,25 +18,25 @@ const FaqList = () => {
                             The orders arrive within 7-20 business days(there may be some delays caused by the customs).
                         </AccordionContent>
                     </AccordionItem>
-                    <AccordionItem value="item-1">
+                    <AccordionItem value="item-2">
                         <AccordionTrigger className="text-[#111111] text-[18px] leading-[1.33em] font-[500] uppercase cursor-pointer hover:no-underline">WHERE IS MY ORDER?</AccordionTrigger>
                         <AccordionContent className="text-base leading-[1.5em] text-[#525252] cursor-pointer">
                             After 2-4 days you will receive an email with the TRACKING NUMBER.
                         </AccordionContent>
                     </AccordionItem>
-                    <AccordionItem value="item-1">
+                    <AccordionItem value="item-3">
                         <AccordionTrigger className="text-[#111111] text-[18px] leading-[1.33em] font-[500] uppercase cursor-pointer hover:no-underline">WHAT SHOULD I DO IF MY ORDER HAS NOT BEEN DELIVERED YET?</AccordionTrigger>
                         <AccordionContent className="text-base leading-[1.5em] text-[#525252] cursor-pointer">
                             In the case of a missed delivery please contact DHL and contact us through the section “CONTACT US”
                         </AccordionContent>
                     </AccordionItem>
-                    <AccordionItem value="item-1">
+                    <AccordionItem value="item-4">
                         <AccordionTrigger className="text-[#111111] text-[18px] leading-[1.33em] font-[500] uppercase cursor-pointer hover:no-underline">WHAT CAN I DO IF MY PACKET IS DEMAGED?</AccordionTrigger>
                         <AccordionContent className="text-base leading-[1.5em] text-[#525252] cursor-pointer">
                             Contact us through the section “CONTACT US”.
                         </AccordionContent>
                     </AccordionItem>
-                    <AccordionItem value="item-1">
+                    <AccordionItem value="item-5">
                         <AccordionTrigger className="text-[#111111] text-[18px] leading-[1.33em] font-[500] uppercase cursor-pointer hover:no-underline">RETURNS POLICY FOR ONLINE PURCHASES:</AccordionTrigger>
                         <AccordionContent className="text-base leading-[1.5em] text-[#525252] cursor-pointer">
                             If your item is eligible for return, you have 15 days from the date you received your order.
@@ -44,7 +44,7 @@ const FaqList = () => {
                             Contact Us through the section “CONTACT US” to return your order.
                         </AccordionContent>
                     </AccordionItem>
-                    <AccordionItem className="border-b! border-[#e5e5e5]" value="item-1">
+                    <AccordionItem className="border-b! border-[#e5e5e5]" value="item-6">
                         <AccordionTrigger className="text-[#111111] text-[18px] leading-[1.33em] font-[500] uppercase cursor-pointer hover:no-underline">PAYMENTS METHODS?</AccordionTrigger>
                         <AccordionContent className="text-base leading-[1.5em] text-[#525252] cursor-pointer">
                             Credit Card : Visa, MasterCard, American Express.
