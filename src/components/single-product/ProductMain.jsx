@@ -6,8 +6,9 @@ import { Button } from '../ui/button';
 import { FaWhatsapp } from 'react-icons/fa6';
 import Image from 'next/image';
 
-const ProductMain = ({ product, translations}) => {
+const ProductMain = ({ product, translations }) => {
     const { title, originalPrice, discountedPrice, featuredImages } = product;
+    const isBag = title.toLowerCase().includes('bag');
     return (
         <section className='pb-[80px]'>
             <div className="max-w-full lg:max-w-[1170px] mx-auto px-[10px] lg:px-0">
@@ -31,13 +32,21 @@ const ProductMain = ({ product, translations}) => {
                                         placeholder="Choose an option"
                                     />
                                 </SelectTrigger>
-                                <SelectContent>
-                                    <SelectItem value="l">L</SelectItem>
-                                    <SelectItem value="m">M</SelectItem>
-                                    <SelectItem value="s">S</SelectItem>
-                                    <SelectItem value="xl">XL</SelectItem>
-                                    <SelectItem value="xs">XS</SelectItem>
-                                </SelectContent>
+                                {
+                                    isBag ? (
+                                        <SelectContent>
+                                            <SelectItem value="unique">Unique</SelectItem>
+                                        </SelectContent>
+                                    ) : (
+                                        <SelectContent>
+                                            <SelectItem value="l">L</SelectItem>
+                                            <SelectItem value="m">M</SelectItem>
+                                            <SelectItem value="s">S</SelectItem>
+                                            <SelectItem value="xl">XL</SelectItem>
+                                            <SelectItem value="xs">XS</SelectItem>
+                                        </SelectContent>
+                                    )
+                                }
                             </Select>
                             <Button className="text-sm font-[400] text-white uppercase mt-6 rounded-none min-h-[50px]"><a target='_blank' href="https://wa.me/393508301446">{translations.whats_app_btn}</a></Button>
                             <a target='_blank' href="https://wa.me/393508301446" className="flex items-center gap-2 mt-4">
