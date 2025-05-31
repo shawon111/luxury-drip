@@ -1,12 +1,14 @@
-import HeaderTopBar from './HeaderTopBar';
+// import HeaderTopBar from './HeaderTopBar';
 import HeaderDesktopMenu from './HeaderDesktopMenu';
 import Image from 'next/image';
 import MobileMenuWrapper from './MobileMenuWrapper';
+import HeaderMarquee from './HeaderMarquee';
 
 const Header = () => {
     return (
         <header>
-            <HeaderTopBar />
+            {/* <HeaderTopBar /> */}
+            <HeaderMarquee />
             <div className='bg-white py-[14px] px-[15px] xl:px-0'>
                 <div className="container flex justify-between items-center mx-auto">
                     <div>
