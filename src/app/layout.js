@@ -5,6 +5,7 @@ import { Jost } from "next/font/google"
 import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
 import { TranslationProvider } from "@/contexts/TranslationContext";
 import { loadCommonTranslations } from "@/lib/loadCommonTranslations";
+import WhatsAppBtn from "@/components/layout/WhatsAppBtn";
 
 export const metadata = {
   title: "Luxury Drip - Best drip at the Best price!",
@@ -24,6 +25,7 @@ export default async function RootLayout({ children }) {
       <TranslationProvider translations={translations}>
         <body className={`${jost.className} relative`} suppressHydrationWarning={true}>
           <LanguageSwitcher />
+          <WhatsAppBtn />
           <Header />
           {children}
           <Footer />
