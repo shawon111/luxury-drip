@@ -41,7 +41,7 @@ const Footer = async() => {
                                     <h3 className="text-[13px] font-[500] text-[#fff] uppercase mb-[27px]">Support</h3>
                                     <ul className="text-[13px] font-[400] text-[#fff]">
                                         <li className="mb-[10px] text-base text-[#ffffffc9]">Contact Us</li>
-                                        <li className="mb-[10px] text-base text-[#ffffffc9]"><a href="mailto:info@luxury-drip.com">info@luxury-drip.com</a></li>
+                                        <li className="mb-[10px] text-base text-[#ffffffc9]"><a href="mailto:info@luxury-drip.com">info.luxurydrip.it@gmail.com</a></li>
                                     </ul>
                                 </div>
                                 <div className="col-span-1">

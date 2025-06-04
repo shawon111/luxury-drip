@@ -12,9 +12,9 @@ const HeaderMarquee = () => (
             <MarqueeContent>
                 <MarqueeItem>
                     <span class="track text-[12px] uppercase leading-[1.3em] text-white">
-                        Profili Instagram temporaneamente non disponibili. Per informazioni, contattateci a info@luxury-drip.com o tramite WhatsApp cliccando sull'icona in basso a destra! <span class="seperator">· XNUMX€</span>
-                        Profili Instagram temporaneamente non disponibili. Per informazioni, contattateci a info@luxury-drip.com o tramite WhatsApp cliccando sull'icona in basso a destra! <span class="seperator">· XNUMX€</span>
-                        Profili Instagram temporaneamente non disponibili. Per informazioni, contattateci a info@luxury-drip.com o tramite WhatsApp cliccando sull'icona in basso a destra! <span class="seperator">· XNUMX€</span>
+                        Profili Instagram temporaneamente non disponibili. Per informazioni, contattateci a info.luxurydrip.it@gmail.com o tramite WhatsApp cliccando sull'icona in basso a destra! <span class="seperator">· XNUMX€</span>
+                        Profili Instagram temporaneamente non disponibili. Per informazioni, contattateci a info.luxurydrip.it@gmail.com o tramite WhatsApp cliccando sull'icona in basso a destra! <span class="seperator">· XNUMX€</span>
+                        Profili Instagram temporaneamente non disponibili. Per informazioni, contattateci a info.luxurydrip.it@gmail.com o tramite WhatsApp cliccando sull'icona in basso a destra! <span class="seperator">· XNUMX€</span>
                     </span>
                 </MarqueeItem>
             </MarqueeContent>
