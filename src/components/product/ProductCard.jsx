@@ -23,6 +23,13 @@ const ProductCard = ({ product, category }) => {
     parseEuroPrice(originalPrice),
     parseEuroPrice(discountedPrice)
   );
+
+  // check product
+  const isBag = title.toLowerCase().includes('bag');
+  const isShoe = ['shoe', 'sneaker', 'skate', 'jordan', 'j4', 'trainer',
+    'cinturino', 'yzy', 'yeezy', 'campus', 'boost'].some(keyword =>
+      title.toLowerCase().includes(keyword)
+    );
   return (
     <Card className="w-full h-[fit-content] relative shadow-none border-0 group overflow-hidden gap-0">
       {/* Discount badge */}
@@ -78,13 +85,43 @@ const ProductCard = ({ product, category }) => {
                 placeholder="Choose an option"
               />
             </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="l">L</SelectItem>
-              <SelectItem value="m">M</SelectItem>
-              <SelectItem value="s">S</SelectItem>
-              <SelectItem value="xl">XL</SelectItem>
-              <SelectItem value="xs">XS</SelectItem>
-            </SelectContent>
+            {
+              isBag ? (
+                <SelectContent>
+                  <SelectItem value="unique">Unique</SelectItem>
+                </SelectContent>
+              ) : isShoe ? (
+                <SelectContent>
+                  <SelectItem value="36">36</SelectItem>
+                  <SelectItem value="36.5">36.5</SelectItem>
+                  <SelectItem value="37">37</SelectItem>
+                  <SelectItem value="37.5">37.5</SelectItem>
+                  <SelectItem value="38">38</SelectItem>
+                  <SelectItem value="38.5">38.5</SelectItem>
+                  <SelectItem value="39">39</SelectItem>
+                  <SelectItem value="39.5">39.5</SelectItem>
+                  <SelectItem value="40">40</SelectItem>
+                  <SelectItem value="40.5">40.5</SelectItem>
+                  <SelectItem value="41">41</SelectItem>
+                  <SelectItem value="41.5">41.5</SelectItem>
+                  <SelectItem value="42">42</SelectItem>
+                  <SelectItem value="42.5">42.5</SelectItem>
+                  <SelectItem value="43">43</SelectItem>
+                  <SelectItem value="43.5">43.5</SelectItem>
+                  <SelectItem value="44">44</SelectItem>
+                  <SelectItem value="44.5">44.5</SelectItem>
+                  <SelectItem value="45">45</SelectItem>
+                  <SelectItem value="45.5">45.5</SelectItem>
+                  <SelectItem value="46">46</SelectItem>
+                </SelectContent>
+              ) : <SelectContent>
+                <SelectItem value="l">L</SelectItem>
+                <SelectItem value="m">M</SelectItem>
+                <SelectItem value="s">S</SelectItem>
+                <SelectItem value="xl">XL</SelectItem>
+                <SelectItem value="xs">XS</SelectItem>
+              </SelectContent>
+            }
           </Select>
         </div>
 
