@@ -3,7 +3,7 @@ import { BaseUrl } from "./BaseUrl";
 export const fetchProductData = async (productId) => {
     try {
         const response = await fetch(
-        `${BaseUrl}/products.json`
+        `${BaseUrl}/products_shoes_discounted.json`
         );
 
         const products = await response.json();
