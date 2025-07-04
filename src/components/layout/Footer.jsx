@@ -54,6 +54,7 @@ const Footer = async() => {
                                         <li className="mb-[10px] text-base text-[#ffffffc9]"><Link href="/refund-policy">{translations.menu.refunds}</Link></li>
                                         <li className="mb-[10px] text-base text-[#ffffffc9]"><Link href="/cash-on-delivery-cod-policy">{translations.menu.cash}</Link></li>
                                     </ul>
+                                    
                                 </div>
                                 <div className="col-span-1">
                                     <p className="text-[13px] font-[500] text-[#fff] uppercase mb-[27px]">
