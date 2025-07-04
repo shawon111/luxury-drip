@@ -55,7 +55,11 @@ const Footer = async() => {
                                         <li className="mb-[10px] text-base text-[#ffffffc9]"><Link href="/cash-on-delivery-cod-policy">{translations.menu.cash}</Link></li>
                                     </ul>
                                 </div>
-                                <div className="col-span-1"></div>
+                                <div className="col-span-1">
+                                    <p className="text-[13px] font-[500] text-[#fff] uppercase mb-[27px]">
+                                        Get extra 40% off on shoes with the coupon code <span className="text-[#A54CFF] font-bold">SCONTO ESTATE</span>. Use it at checkout to enjoy the discount!
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>

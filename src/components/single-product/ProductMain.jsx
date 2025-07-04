@@ -79,6 +79,9 @@ const ProductMain = ({ product, translations }) => {
                                 <FaWhatsapp size={22} className="text-black" />
                                 +393508301446
                             </a>
+                            <div>
+                                <p className='text-base text-green-700 leading-[1.5] mt-[20px]'>Use this coupon to get extra 40% discount - "SCONTO ESTATE"</p>
+                            </div>
                         </div>
                         <div className='mt-[30px]'>
                             <a className='w-[fit-content] inline-block' target='_blank' href="https://it.trustpilot.com/review/www.luxury-drip.com">
