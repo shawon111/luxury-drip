@@ -4,9 +4,7 @@ import Stripe from 'stripe';
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 const coupons = {
-  SAVE10: true,
-  SHOES40: true,
-  WELCOME40: true,
+  SCONTOESTATE:true
 };
 
 // Helpers
