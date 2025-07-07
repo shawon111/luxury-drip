@@ -14,7 +14,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function sendEmail({ to, subject, text, html }) {
   try {
     const data = await resend.emails.send({
-      from: 'Your Store <you@yourdomain.com>', // Must be verified in Resend
+      from: 'Luxury Drip <memory-mate.fabbythemes.com>', // Must be verified in Resend
       to,
       subject,
       text,

@@ -110,7 +110,7 @@ ${cart.map((item, i) =>
     // 3. Send email to store owner (fail-safe)
     try {
       await sendEmail({
-        to: 'you@yourdomain.com',
+        to: 'shawonahmme19@gmail.com',
         subject: `🛍️ New Order - €${totalEUR}`,
         text: plainText,
         html,
