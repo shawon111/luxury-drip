@@ -1,13 +1,13 @@
-// import HeaderTopBar from './HeaderTopBar';
 import HeaderDesktopMenu from './HeaderDesktopMenu';
 import Image from 'next/image';
 import MobileMenuWrapper from './MobileMenuWrapper';
 import HeaderMarquee from './HeaderMarquee';
+import CartIcon from './CartIcon';
+import CartWrapper from './CartWrapper';
 
 const Header = () => {
     return (
         <header>
-            {/* <HeaderTopBar /> */}
             <HeaderMarquee />
             <div className='bg-white py-[14px] px-[15px] xl:px-0'>
                 <div className="container flex justify-between items-center mx-auto">
@@ -23,12 +23,9 @@ const Header = () => {
                         />
                     </div>
                     <div>
-                        <Image
-                            src={'/images/cart-icon.svg'}
-                            width={18}
-                            height={18}
-                            alt="Cart Icon"
-                        />
+                        <CartWrapper>
+                            <CartIcon />
+                        </CartWrapper>
                     </div>
                 </div>
             </div>

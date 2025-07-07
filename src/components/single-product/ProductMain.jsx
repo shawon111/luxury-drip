@@ -5,6 +5,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 import { Button } from '../ui/button';
 import { FaWhatsapp } from 'react-icons/fa6';
 import Image from 'next/image';
+import CartWrapper from '../layout/CartWrapper';
+import AddToCartBtn from '../product/AddToCartBtn';
 
 const ProductMain = ({ product, translations }) => {
     const { title, originalPrice, discountedPrice, featuredImages } = product;
@@ -74,13 +76,16 @@ const ProductMain = ({ product, translations }) => {
                                     </SelectContent>
                                 }
                             </Select>
-                            <Button className="text-sm font-[400] text-white uppercase mt-6 rounded-none min-h-[50px]"><a target='_blank' href="https://wa.me/393508301446">{translations.whats_app_btn}</a></Button>
-                            <a target='_blank' href="https://wa.me/393508301446" className="flex items-center gap-2 mt-4">
+                            {/* <Button className="text-sm font-[400] text-white uppercase mt-6 rounded-none min-h-[50px]"><a target='_blank' href="https://wa.me/393508301446">{translations.whats_app_btn}</a></Button> */}
+                            {/* <a target='_blank' href="https://wa.me/393508301446" className="flex items-center gap-2 mt-4">
                                 <FaWhatsapp size={22} className="text-black" />
                                 +393508301446
-                            </a>
+                            </a> */}
+                            <CartWrapper>
+                                <AddToCartBtn product={product} />
+                            </CartWrapper>
                             <div>
-                                <p className='text-base text-green-700 leading-[1.5] mt-[20px]'>Use this coupon to get extra 40% discount - "SCONTO ESTATE"</p>
+                                <p className='text-base text-green-700 leading-[1.5] mt-[20px]'>Use this coupon to get extra 40% discount - "SCONTOESTATE"</p>
                             </div>
                         </div>
                         <div className='mt-[30px]'>

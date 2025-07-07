@@ -1,7 +1,6 @@
 "use client";
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import {
   Select,
   SelectContent,
@@ -9,15 +8,17 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Eye } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { discountPercentage } from "@/lib/discountPercentage";
 import { parseEuroPrice } from "@/lib/parseEuroPrice";
+import AddToCartBtn from "./AddToCartBtn";
+import CartWrapper from "../layout/CartWrapper";
 
 const ProductCard = ({ product, category }) => {
   const { title, originalPrice, discountedPrice, featuredImages, productId } =
     product;
+    console.log(product)
   // Calculate discount percentage
   const discount = discountPercentage(
     parseEuroPrice(originalPrice),
@@ -126,13 +127,9 @@ const ProductCard = ({ product, category }) => {
         </div>
 
         {/* Add to Cart Button & Eye Icon */}
-        <div className="flex items-center justify-between mt-[20px]">
-          <Button className="uppercase bg-transparent border-0 text-[#111111] shadow-none hover:bg-transparent hover:text-[#111111] hover:shadow-none hover:border-0 p-0 text-[16px] font-[500] leading-[1em]">
-
-            <Link href={`/products/${productId}`}>Add to Cart</Link>
-          </Button>
-          <Eye className="w-4 h-4" />
-        </div>
+        <CartWrapper>
+          <AddToCartBtn product={product} />
+        </CartWrapper>
       </CardContent>
     </Card>
   );
